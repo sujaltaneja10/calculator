@@ -45,6 +45,28 @@ document.querySelectorAll(".green").forEach((e) => {
     });
 });
 
+document.querySelector('.sign-change').addEventListener('click', () => {
+    if (secondNumber == null) {
+        firstNumber = -firstNumber;
+        screen.textContent = firstNumber;
+    }
+    else {
+        secondNumber = -secondNumber;
+        screen.textContent = secondNumber;
+    }
+});
+
+document.querySelector('.percent').addEventListener('click', () => {
+    if (secondNumber == null) {
+        firstNumber /= 100;
+        screen.textContent = firstNumber;
+    }
+    else {
+        secondNumber /= 100;
+        screen.textContent = secondNumber;
+    }
+});
+
 document.querySelectorAll(".symbols").forEach((e) => {
     e.addEventListener('click', () => {
         if (secondNumber == null) {
@@ -66,16 +88,6 @@ document.querySelector('.clear').addEventListener('click', () => {
     screen.textContent = 0;
     operator = null;
     secondNumber = null;
-});
-
-document.querySelector('.sign-change').addEventListener('click', () => {
-    firstNumber = -firstNumber;
-    screen.textContent = firstNumber;
-});
-
-document.querySelector('.percent').addEventListener('click', () => {
-    firstNumber = firstNumber/ 100;
-    screen.textContent = firstNumber;
 });
 
 document.querySelector('.decimal').addEventListener('click', () => {
