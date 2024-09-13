@@ -30,7 +30,12 @@ const screen = document.querySelector(".screen");
 document.querySelectorAll(".green").forEach((e) => {
     e.addEventListener('click', () => {
         if (operator == null) {
-            screen.textContent  += e.textContent;
+            if (screen.textContent < 0) {
+                screen.textContent = -screen.textContent;
+                screen.textContent += e.textContent;
+                screen.textContent = -screen.textContent;
+            }
+            else screen.textContent += e.textContent;
         }
         else {
             if (secondNumber == null) screen.textContent = '';
@@ -45,6 +50,7 @@ document.querySelectorAll(".symbols").forEach((e) => {
         if (secondNumber == null) {
             firstNumber = +screen.textContent;
             operator = e.textContent;
+            if (operator == '+/-' || operator == '%') operator = null;
         }
         else {
             screen.textContent = operate(firstNumber, operator, secondNumber);
