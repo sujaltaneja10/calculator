@@ -79,7 +79,7 @@ document.querySelector('.percent').addEventListener('click', () => {
 });
 
 document.querySelector('.decimal').addEventListener('click', () => {
-    if (screen.textContent.includes('.')) {
+    if (!screen.textContent.includes('.')) {
         screen.textContent += '.';
     }
 });
