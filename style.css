@@ -1,0 +1,59 @@
+* {
+    font-size: 35px;
+}
+
+.container {
+    border: 5px solid black;
+    height: 600px;
+    width: 409px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.child {
+    width: 400px;
+    height: 100px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.btn {
+    height: 100x;
+    width: 100px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.screen {
+    width: 500px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.zero {
+    width: 200px;
+}
+
+.green, .decimal {
+    background-color: rgb(25, 99, 25);
+}
+
+.blue {
+    background-color: rgb(92, 92, 178);
+}
+
+.orange {
+    background-color: rgb(203, 145, 37);
+}
+
+.screen {
+    background-color: rgb(154, 149, 149);
+}
