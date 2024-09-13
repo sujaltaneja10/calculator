@@ -46,23 +46,23 @@ document.querySelectorAll(".green").forEach((e) => {
 });
 
 document.querySelector('.sign-change').addEventListener('click', () => {
-    if (secondNumber == null) {
-        firstNumber = -firstNumber;
+    if (operator == null) {
+        firstNumber = -Number(screen.textContent);
         screen.textContent = firstNumber;
     }
     else {
-        secondNumber = -secondNumber;
+        secondNumber = -Number(screen.textContent);
         screen.textContent = secondNumber;
     }
 });
 
 document.querySelector('.percent').addEventListener('click', () => {
     if (secondNumber == null) {
-        firstNumber /= 100;
+        firstNumber = Number(screen.textContent) / 100;
         screen.textContent = firstNumber;
     }
     else {
-        secondNumber /= 100;
+        secondNumber= Number(screen.textContent) / 100;
         screen.textContent = secondNumber;
     }
 });
